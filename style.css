@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(55deg, rgb(48, 49, 54), rgb(42, 42, 112));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 96vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em 0;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    max-width: 400px;
+    margin:auto;
+    padding: 1em;
+    box-shadow: 5px 5px 15px rgba(145, 143, 143, 0.363);
+    border-radius: 8px;
+    background: linear-gradient(45deg, rgb(17, 15, 15), rgba(37, 37, 122, 0.637));
+}
+
+.display {
+    text-align: right;
+    width: calc(100% - 2em);
+    font-size: 20px;
+    padding: 1em;
+    background: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    color: white;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.buttons button:hover {
+    background-color: #686565;
+    transform: scale(.9);
+    box-shadow: 0 0 20px #686565;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+.buttons button.operator {
+    background-color: transparent;
+    color: #ffbf00;
+    font-size: 28px;
+}
+
+.buttons button.operator:hover {
+    background-color: #ffbf00;
+    color: white
+}
+
+.buttons button.equal {
+    background-color: #ffbf00;
+    color: white;
+}
+
+.buttons button.equal:hover {
+    background-color: transparent;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 20px;
+    }
+    .calculator {
+        width: 90%;
+        max-width: 300px;
+        padding: 0.5em;
+    }
+    
+    .display {
+        font-size: 16px;
+    }
+    
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3px;
+    }
+    
+    .buttons button {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+
+footer{
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 10px;
+}
+
+footer h1{
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
